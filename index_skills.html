@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Skills</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #333;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .details {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My Skills</h1>
+</header>
+
+<main>
+  <section>
+    <h2 onclick="toggleDetails('ml')">Machine Learning</h2>
+    <div id="ml" class="details">
+      <ul>
+        <li>Developed tools for clients using Python and SQL.</li>
+        <li>Applied Machine Learning algorithms: Linear Regression, Naïve Bayes, KNN, SVM, Decision Tree, Random Forest.</li>
+        <li>Utilized NLP techniques for text understanding and classification.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 onclick="toggleDetails('dl')">Deep Learning</h2>
+    <div id="dl" class="details">
+      <ul>
+        <li>Deep Learning: Neural Networks, ANN, CNN, DNN, Transfer Learning, Back Propagation.</li>
+        <li>Applied linear algebra, activation & loss functions, optimizers in deep learning projects.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 onclick="toggleDetails('sql')">SQL</h2>
+    <div id="sql" class="details">
+      <ul>
+        <li>Proficient in SQL for data collection and manipulation.</li>
+        <li>Implemented CRUD operations, sub-queries, and window functions in databases.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Add more sections for additional skills -->
+
+</main>
+
+<footer>
+  <p>&copy; 2023 Your Name</p>
+</footer>
+
+<script>
+  function toggleDetails(skillId) {
+    var details = document.getElementById(skillId);
+    details.style.display = (details.style.display === 'block') ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>

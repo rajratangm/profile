@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Page</title>
+  <style>
+    /* Add your styles here */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .project-card {
+      border: 1px solid #ddd;
+      margin: 10px;
+      padding: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    .project-details {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My Projects</h1>
+</header>
+
+<main>
+  <div class="project-card" onclick="toggleDetails('project1')">
+    <h3>Project 1</h3>
+    <div class="project-details" id="project1">
+      <p>Description: This is the first project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>GitHub: <a href="https://github.com/project1" target="_blank">https://github.com/project1</a></p>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="toggleDetails('project2')">
+    <h3>Project 2</h3>
+    <div class="project-details" id="project2">
+      <p>Description: This is the second project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>GitHub: <a href="https://github.com/project2" target="_blank">https://github.com/project2</a></p>
+    </div>
+  </div>
+
+  <!-- Add more project cards as needed -->
+
+</main>
+
+<footer>
+  <p>&copy; 2023 Your Name</p>
+</footer>
+
+<script>
+  function toggleDetails(projectId) {
+    var projectDetails = document.getElementById(projectId);
+    projectDetails.style.display = (projectDetails.style.display === 'block') ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
